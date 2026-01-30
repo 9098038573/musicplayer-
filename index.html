@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Yogimp3 - Background Player</title>
+
+    <link rel="stylesheet" type="text/css" href="player.css">
+
+<script type="text/javascript" src="http://yogimp3.xtgem.com/Sanam/player.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="http://yogimp3.xtgem.com/Sanam/player1.0.js" id="amazingaudioplayer-script-js"></script>
+
+</head>
+<body>
+
+    <div id="amazingaudioplayer-8" style="display:block;position:relative;width:100%;max-width:360px;margin:20px auto;">
+        
+        
+        <ul class="amazingaudioplayer-audios" style="display:none;">
+            <li data-artist="Sanam Puri" data-title="Raat Kali Ek Khwab Mein" data-album="Sanam" data-info=" " data-image="https://yogimp3.xtgem.com/Sanam/pi.png" data-duration="217"> 
+                <div class="amazingaudioplayer-source" data-src="https://github.com/9098038573/01/raw/refs/heads/main/70s_Special_Mashup%E2%96%B6_Devotees_Insanos___Chand_Mera_Dil___Chadhti_Jawani___Meri_Bheegi_Bheegi_Si(256k).mp3" data-type="audio/mpeg"></div>
+            </li>
+            <li data-artist="Sanam Puri" data-title="Tere Bina Zindagi Se" data-album="Sanam" data-info=" " data-image="https://yogimp3.xtgem.com/Sanam/pi.png" data-duration="278"> 
+                <div class="amazingaudioplayer-source" data-src="https://yogimp3.xtgem.com/Sanam/Tere_Bina_Zindagi_Se.mp3" data-type="audio/mpeg"></div>
+            </li>
+            <li data-artist="Rahul Pandey" data-title="Ajib Dastan Hai Yeh" data-album="Sanam" data-info="" data-image="https://yogimp3.xtgem.com/Sanam/pi.png" data-duration="212"> 
+                <div class="amazingaudioplayer-source" data-src="https://yogimp3.xtgem.com/Sanam/Ajeeb_Dastan_Hai_Yeh.mp3" data-type="audio/mpeg"></div>
+            </li>
+            <li data-artist="Sanam Puri" data-title="Mere Mehboob Qayamat Hogi" data-album="Sanam" data-info=" " data-image="https://yogimp3.xtgem.com/Sanam/pi.png" data-duration="264"> 
+                <div class="amazingaudioplayer-source" data-src="https://yogimp3.xtgem.com/Sanam/Mere_Mehboob_Qayamat_Hogi.mp3" data-type="audio/mpeg"></div>
+            </li>
+            <li data-artist="Soogum Sookha" data-title="Hai Apna Dil To Awara" data-album="Sanam" data-info=" " data-image="https://yogimp3.xtgem.com/Sanam/pi.png" data-duration="205"> 
+                <div class="amazingaudioplayer-source" data-src="https://yogimp3.xtgem.com/Sanam/Hai_Apna_Dil_To_Awara.mp3" data-type="audio/mpeg"></div>
+            </li>
+        </ul>
+    </div> 
+    <script type="text/javascript" src="player.js" defer></script>
+    <script type="text/javascript" src="player1.0.js" defer></script>
+    <script type="text/javascript" src="myplayer.js" defer></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var ul = document.querySelector(".amazingaudioplayer-audios");
+    for (var i = ul.children.length; i >= 0; i--) {
+        ul.appendChild(ul.children[Math.random() * i | 0]);
+    }
+});
+</script>
+</body>
+
+</html>
